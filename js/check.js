@@ -13,7 +13,7 @@ const checkBoxes = document.querySelectorAll(
   'input.dashboard-input-checked-card',
 );
 const spanBtnWorksheets = document.querySelectorAll('.span-btn-worksheets');
-const spanBtnImages = document.querySelectorAll('.span-btn-images');
+
 const spanBtnAll = document.querySelectorAll('.span-btn-all');
 const spanBtnDelete = document.querySelectorAll('.span-btn-delete');
 const dashboardItemCardImg = document.querySelectorAll(
@@ -48,9 +48,6 @@ for (let i = 0; i < checkBoxes.length; i++) {
       spanBtnWorksheet.textContent = checkedCount + ' ';
     }
 
-    for (const spanBtnImage of spanBtnImages) {
-      spanBtnImage.textContent = checkedCount + ' ';
-    }
     for (const spanBtnAllItem of spanBtnAll) {
       spanBtnAllItem.textContent = checkedCount + checkedCount + ' ';
     }
@@ -79,9 +76,6 @@ checkAll.onclick = function () {
       spanBtnWorksheet.textContent = checkedCount + ' ';
     }
 
-    for (const spanBtnImage of spanBtnImages) {
-      spanBtnImage.textContent = checkedCount + ' ';
-    }
     for (const spanBtnAllItem of spanBtnAll) {
       spanBtnAllItem.textContent = checkedCount + checkedCount + ' ';
     }
