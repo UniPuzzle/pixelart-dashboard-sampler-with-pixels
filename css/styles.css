@@ -273,7 +273,18 @@ input {
 .dashboard-item:focus {
   outline: 3px solid #cecccc;
 }
+
 .dashboard-item-card__thumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding: 4px;
+  width: 113px;
+  min-height: 148px;
+
+  margin-left: auto;
+  margin-right: auto;
   background-color: #fff;
 }
 
@@ -296,15 +307,10 @@ input {
 }
 
 /* =================== */
-.dashboard-item-card {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  justify-content: center;
-}
+
 .pla-sq {
-  width: 7.5px;
-  height: 7.5px;
+  width: 7px;
+  height: 7px;
 }
 /* ========= */
 .pla-rgb-1 {
