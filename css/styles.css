@@ -292,6 +292,7 @@ input {
   min-height: 148px;
 
   background-color: #fff;
+  cursor: pointer;
 }
 
 .dashboard-item-card__img {
@@ -378,11 +379,46 @@ label {
 /* ====Modal for img====== */
 .modal {
   padding: 0;
-  transform: scale(2.8);
+
   border: none;
   outline: none;
+
+  -webkit-transform: scale(2.8);
+  -ms-transform: scale(2.8);
+  transform: scale(2.8);
+
+  -webkit-animation: modal-scale 1s;
+  animation: modal-scale 1s;
 }
 
+@-webkit-keyframes modal-scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(2.8);
+    transform: scale(2.8);
+  }
+}
+
+@keyframes modal-scale {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(2.8);
+    transform: scale(2.8);
+  }
+}
+
+dialog::-webkit-backdrop {
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.25);
   cursor: pointer;
