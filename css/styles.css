@@ -200,6 +200,16 @@ input {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  animation-name: anim;
+  animation-duration: 0.4s;
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .dashboard-form-btn-menu p {
