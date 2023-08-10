@@ -6,7 +6,10 @@ dashboardList.addEventListener('click', showModal);
 
 function showModal(e) {
   let elem = e.target.parentElement;
-  if (!elem.classList.contains('dashboard-item-card__thumb')) {
+  if (
+    !elem.classList.contains('dashboard-item-card__thumb') &&
+    !elem.classList.contains('dashboard-item-card__thumb--horizontal')
+  ) {
     return;
   }
 

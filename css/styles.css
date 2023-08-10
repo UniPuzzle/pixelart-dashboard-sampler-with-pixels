@@ -186,20 +186,28 @@ input {
 }
 .dashboard-list-header {
   display: flex;
-  align-items: center;
-  padding: 20px 0px 0px;
+  align-items: flex-end;
+  padding: 10px 0px 0px;
+  max-height: 90px;
 }
 .dashboard-btn-menu {
   line-height: 1.4;
   display: flex;
-  width: 1036px;
-  padding: 0 0 0 20px;
-  display: none;
-}
-.dashboard-btn-menu-show {
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
+  width: 1036px;
+  padding: 0 0 0 20px;
+
+  display: none;
+  /* opacity: 0; */
+}
+.dashboard-btn-menu p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.dashboard-btn-menu-show {
+  /* opacity: 1; */
+  display: flex;
   animation-name: anim;
   animation-duration: 0.4s;
 }
@@ -211,18 +219,20 @@ input {
     opacity: 1;
   }
 }
-
-.dashboard-form-btn-menu p {
-  font-size: 18px;
-  margin-bottom: 20px;
+.dashboard-form-btn-menu {
+  display: flex;
 }
 .dashboard-form-btn-menu label {
   font-size: 22px;
-  margin-right: 20px;
+  margin-right: 52px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
 }
 .dashboard-form-btn-menu input {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
 }
 
 .button {
@@ -249,6 +259,7 @@ input {
   align-items: flex-end;
   margin-left: auto;
   margin-right: 20px;
+  padding-bottom: 11px;
 }
 
 .dashboard-label-checked-cards-all {
@@ -290,7 +301,7 @@ input {
   flex-direction: column;
   justify-content: space-between;
   align-content: stretch;
-  min-height: 100%;
+  min-height: 206px;
   padding: 15px;
 }
 .dashboard-item:focus {
@@ -424,8 +435,8 @@ label {
   -ms-transform: scale(2.8);
   transform: scale(2.8);
 
-  -webkit-animation: modal-scale 1s;
-  animation: modal-scale 1s;
+  -webkit-animation: modal-scale 0.4s;
+  animation: modal-scale 0.4s;
 }
 
 @-webkit-keyframes modal-scale {
