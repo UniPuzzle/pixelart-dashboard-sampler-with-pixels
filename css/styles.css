@@ -372,7 +372,7 @@ label {
   height: 7px;
 }
 .modal__content .pla-sq:hover {
-  transform: scale(1.2);
+  transform: scale(0.8);
 }
 /* ========= */
 .pla-rgb-1 {
@@ -445,11 +445,13 @@ label {
 @-webkit-keyframes modal-scale {
   0% {
     -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 
   100% {
     -webkit-transform: scale(2.8);
+    -ms-transform: scale(2.8);
     transform: scale(2.8);
   }
 }
@@ -457,11 +459,13 @@ label {
 @keyframes modal-scale {
   0% {
     -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1);
   }
 
   100% {
     -webkit-transform: scale(2.8);
+    -ms-transform: scale(2.8);
     transform: scale(2.8);
   }
 }
@@ -473,4 +477,11 @@ dialog::-webkit-backdrop {
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
