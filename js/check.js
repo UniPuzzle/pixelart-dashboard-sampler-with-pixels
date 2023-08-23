@@ -86,6 +86,7 @@ checkAll.onclick = function () {
     // ========Show "dashboard-btn-menu" if all checkboxes are selected
     for (const el of btnMenu) {
       el.classList.add('dashboard-btn-menu-show');
+
       if (this.checked === false) {
         el.classList.remove('dashboard-btn-menu-show');
       }
