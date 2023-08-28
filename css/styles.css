@@ -371,7 +371,7 @@ label {
   width: 7px;
   height: 7px;
 }
-.modal__content .pla-sq:hover {
+.dashboard-item-card__thumb .pla-sq:hover {
   transform: scale(0.8);
 }
 /* ========= */
@@ -487,7 +487,4 @@ dialog {
   /* left: 0;
   right: 0;
   margin: 0 auto; */
-}
-.modal .dashboard-item-card__thumb {
-  position: absolute;
 }
