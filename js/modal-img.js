@@ -23,8 +23,7 @@
 //   }
 // };
 
-const modal = document.querySelector('dialog');
-const modalContent = document.querySelector('.modal__content');
+const modal = document.querySelector('.modal');
 const dashboardList = document.querySelector('.dashboard-list ');
 
 dashboardList.addEventListener('click', showModal);
@@ -38,8 +37,8 @@ function showModal(e) {
     return;
   }
 
+  modal.classList.add('modal-open');
   modal.innerHTML = elem.outerHTML;
-  modal.showModal();
 }
 
 modal.onclick = e => {
@@ -47,6 +46,12 @@ modal.onclick = e => {
     !e.target.closest('.dashboard-item-card__thumb') &&
     !e.target.closest('.dashboard-item-card__thumb--horizontal')
   ) {
-    modal.close();
+    modal.classList.remove('modal-open');
   }
 };
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    modal.classList.remove('modal-open');
+  }
+});
