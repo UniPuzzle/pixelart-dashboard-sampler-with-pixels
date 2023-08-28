@@ -429,6 +429,7 @@ label {
 
 /* ====Modal for img====== */
 .modal {
+  position: relative;
   padding: 0;
 
   border: none;
@@ -480,8 +481,13 @@ dialog::backdrop {
 }
 
 dialog {
-  position: absolute;
-  left: 0;
+  /* position: absolute; */
+  /* top: 50%; */
+
+  /* left: 0;
   right: 0;
-  margin: auto;
+  margin: 0 auto; */
+}
+.modal .dashboard-item-card__thumb {
+  position: absolute;
 }
